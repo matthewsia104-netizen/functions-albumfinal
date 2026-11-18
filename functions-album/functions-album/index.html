@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Functions in the Wild · MHF4U Album</title>
+  <meta name="description" content="A photo album of nine advanced functions found around Sunway, Malaysia, each modelled in Desmos.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Back to top">
+    <svg viewBox="0 0 40 40" width="26" height="26" aria-hidden="true"><use href="#i-burst"/></svg>
+    <span>Functions Album</span>
+  </a>
+  <nav id="nav" aria-label="Functions"></nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow" id="course"></p>
+      <h1>Functions<br>in the wild!</h1>
+      <p class="lede">Nine everyday spots around <span id="loc">Sunway</span>, each fitted with an advanced function and modelled in Desmos.</p>
+      <ul class="pills">
+        <li><a href="#album">The album</a></li>
+        <li><a href="#process">How we modelled it</a></li>
+        <li><a href="#checklist">Submission checklist</a></li>
+      </ul>
+      <p class="team" id="team"></p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 460 460" class="shapes">
+        <polygon points="40,360 150,40 230,200" fill="#5DA9DA"/>
+        <polygon points="150,40 330,230 230,200" fill="#E04A30"/>
+        <polygon points="40,360 230,200 330,230" fill="#000"/>
+        <polygon points="190,310 320,150 450,200 450,330 330,430 250,430" fill="#FDB544"/>
+        <polygon points="450,200 450,330 330,430 320,300" fill="#000"/>
+        <polygon points="180,360 250,300 320,360 300,430 200,430" fill="#30AE80"/>
+        <circle cx="105" cy="400" r="52" fill="#000"/>
+        <g fill="none" stroke="#FFFDF5" stroke-width="3"><ellipse cx="105" cy="400" rx="22" ry="52"/><line x1="53" y1="400" x2="157" y2="400"/><line x1="105" y1="348" x2="105" y2="452"/></g>
+        <path d="M390 60 l8 22 22 8 -22 8 -8 22 -8 -22 -22 -8 22 -8z" fill="#000"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ALBUM (rendered from data/functions.js) -->
+  <section id="album" aria-label="The function album"></section>
+
+  <!-- PROCESS -->
+  <section id="process" class="band band-cream">
+    <div class="wrap">
+      <h2 class="section-title">How we modelled each photo</h2>
+      <ol class="steps">
+        <li class="step s-red"><span>Step 1</span><strong>Set the origin.</strong><p>Import the photo into Desmos and place the origin and axis scale on a sensible point of the real object.</p></li>
+        <li class="step s-blue"><span>Step 2</span><strong>Define the axes.</strong><p>Label axes and units so every grid square means something physical.</p></li>
+        <li class="step s-green"><span>Step 3</span><strong>Use the points.</strong><p>Pick two key points on the photo, substitute them, and solve for <em>a</em>, <em>k</em>, <em>d</em>, <em>c</em> by hand before touching a slider.</p></li>
+        <li class="step s-orange"><span>Step 4</span><strong>Refine and restrict.</strong><p>Fine-tune in Desmos, then restrict domain and range to what physically exists in the photo.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section id="checklist" class="band band-blue">
+    <div class="wrap">
+      <h2 class="section-title">Submission checklist</h2>
+      <p class="section-sub">Tick items as your group completes them (saved on this device only).</p>
+      <div class="checks" id="checks"></div>
+    </div>
+  </section>
+
+  <section class="band band-orange closing">
+    <div class="wrap">
+      <h2 class="section-title">Where does the model break?</h2>
+      <p class="big">Every real object has thickness, edges and a finish. The best models say clearly where the maths stops matching the world.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>MHF4U Advanced Functions · Real-World Functions CCT</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+<!-- Lightbox -->
+<dialog id="lightbox" aria-label="Enlarged image"><button class="close" aria-label="Close">×</button><img alt=""><p></p></dialog>
+
+<!-- Icon sprite (original shapes in the theme's style) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="i-burst"><g transform="translate(20 20)" fill="#000"><rect x="-3" y="-19" width="6" height="38" rx="3"/><rect x="-3" y="-19" width="6" height="38" rx="3" transform="rotate(45)"/><rect x="-3" y="-19" width="6" height="38" rx="3" transform="rotate(90)"/><rect x="-3" y="-19" width="6" height="38" rx="3" transform="rotate(135)"/></g></g>
+  </defs>
+</svg>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script src="data/functions.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
